@@ -1,11 +1,8 @@
 /*
 =======================================================================================
-FILE 		 : Midterm(Taparan,To Chip).C
-AUTHOR 		 : Taparan, Jecho and To Chip, Andrea
+AUTHORS : Taparan, Jecho and To Chip, Andrea
 DESCRIPTION  : Computes the number of containers needed for different volumes of Fruit Salad
-COPYRIGHT    : 10/16/24
-REVISION HISTORY 
-Date:      By:   Description: 
+CREATION DATE  : 10/16/24
 =======================================================================================
 */
 
