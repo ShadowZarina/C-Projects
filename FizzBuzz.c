@@ -5,17 +5,18 @@ int main(){
     printf("Enter a number: ");
     scanf("%d",&num);
     
-    if ((num % 2 == 0) && (num % 5 == 0)){
+    if ((num % 15 == 0){
 		printf("\nFIZZBUZZ");
 	}
-	else if (num % 2 == 0){
+	else if (num % 3 == 0){
 		printf("\nFIZZ");
 	}
 	else if (num % 5 == 0){
-		printf("\nFUZZ");
+		printf("\nBUZZ");
 	}
 	else{
 		printf("\n%d",num);
 	}
     return 0;
 }
+
