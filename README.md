@@ -14,9 +14,9 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 
 
 #### Links
-Roadmap
+- Roadmap
 https://roadmap.sh/datastructures-and-algorithms
-Leetcode Grind 75
+- Leetcode Grind 75
 https://leetcode.com/problem-list/rab78cw1/
-Neetcode Course (use the free resources)
+- Neetcode Course (use the free resources)
 https://neetcode.io/courses/dsa-for-beginners/0
