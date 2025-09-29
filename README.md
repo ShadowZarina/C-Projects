@@ -11,3 +11,9 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 - Learn insertion and merge sorting
 
 ## DSA: Things to Learn
+
+
+#### Links
+https://roadmap.sh/datastructures-and-algorithms
+https://leetcode.com/problem-list/rab78cw1/
+https://neetcode.io/courses/dsa-for-beginners/0
