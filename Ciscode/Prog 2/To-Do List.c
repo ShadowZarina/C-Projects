@@ -1,11 +1,13 @@
 /* 
-Create a program that allows a user to input elements in an array of their chosen size, sort the elements in ascending order, and print out the new array.
+Create a To-Do List program where the user can add, view, and delete tasks.
 
 The program should:
-1. Ask the user to input the number of elements/size of the array.
-2. Ask the user to input all the elements of the array based on its size.
-3. Use a nested for loop to reverse the order of all inputted numbers.
-4. Print out the new array in a proper bracketed format.
+1. Print out a list of options for the user to choose from.
+2. Ask the user to input their choice.
+3. Call a function corresponding to the user's choice using a switch case.
+3a. Allow the user to input a task in their own words.
+3b. Print out a list of all tasks using an array.
+3c. Delete a task by asking the user to input its index.
 */
 
 #include <stdio.h>
