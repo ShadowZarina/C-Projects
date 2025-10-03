@@ -2,12 +2,29 @@
 Create a To-Do List program where the user can add, view, and delete tasks.
 
 The program should:
+
 1. Print out a list of options for the user to choose from.
 2. Ask the user to input their choice.
 3. Call a function corresponding to the user's choice using a switch case.
-3a. Allow the user to input a task in their own words.
-3b. Print out a list of all tasks using an array.
-3c. Delete a task by asking the user to input its index.
+
+(To ensure the main menu loops after each function call, secure all the code above in a while (1) loop.)
+
+3a. Add Tasks
+void addTasks(char tasks[][100], int *length) 
+Allow the user to input a task in their own words.
+
+(Use the fgets(array[*length], char limit, stdin) to read input.)
+
+3b. View Tasks
+void viewTasks(char tasks[][100], int *length)
+Print out a list of all tasks using an array.
+
+3c. Delete Tasks
+void deleteTasks(char tasks[][100], int *length)
+Delete a task by asking the user to input its index.
+
+(Make sure to call the viewTasks function to print out the list of tasks again.)
+(You may use the strcpy() function from string.h to left shift the tasks.)
 */
 
 #include <stdio.h>
@@ -19,7 +36,6 @@ void addTasks(char tasks[][100], int *length) {
         return;
     }
     printf("Enter a new task: \n");
-    getchar();  
     fgets(tasks[*length], 100, stdin);
     (*length)++;                 
 }
@@ -34,7 +50,7 @@ void viewTasks(char tasks[][100], int *length) {
     }
 
     for (i = 0; i < *length; i++) {
-        printf("%d. %s\n", i + 1, tasks[i]);
+        printf("%d. %s", i + 1, tasks[i]);
     }
 }
 
@@ -75,7 +91,8 @@ int main() {
         printf("3. Delete Task\n");
         printf("4. Exit\n");
         printf("Enter a choice: ");
-        scanf(" %d", &choice);
+        scanf("%d", &choice);
+        while (getchar() != '\n'); 
 
         switch (choice) {
             case 1:
@@ -97,5 +114,6 @@ int main() {
 
     return 0;
 }
+
 
 
