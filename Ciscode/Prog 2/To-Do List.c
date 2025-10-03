@@ -48,23 +48,26 @@ int deleteTasks() {
 int main() {
     int choice, i, length = 0;
 
-    printf("Enter the number of elements in the array: ");
+    printf("----- TO-DO LIST ----- \n");
+    printf("1. Add Task\n");
+    printf("2. View Tasks\n");
+    printf("3. Delete Task\n");
     scanf("%d", &choice);
 
     int tasks[length];
 
-    for (i = 0; i < length; i++) {
-        printf("Enter number %d of the array: ", i+1);
-        scanf("%d", &array[i]);
-    }
-
-    
-    while (left < right) {
-        temp = array[left];
-        array[left] = array[right];
-        array[right] = temp;
-        left++;
-        right--;
+    switch case (choice) {
+        case 1:
+            addTasks();
+            break;
+        case 2:
+            viewTasks();
+            break;
+        case 3:
+            deleteTasks();
+            break;
+        default:
+            break;
     }
 
     return 0;
