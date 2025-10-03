@@ -12,12 +12,32 @@ The program should:
 
 #include <stdio.h>
 
+int addTasks() {
+    printf("Enter a new task:");
+    scanf("%d", tasks[length]);
+
+    return 1;
+}
+
+int viewTasks() {
+    printf("To-Do List:\n");
+        for (i = 0; i < length; i++) {
+            if (i == length - 1) {
+                printf("%d", array[i]);
+            } else {
+                printf("%d, ", array[i]);
+            }
+        }
+        printf("}");
+
+    return 1;
+}
+
 int main() {
-    int length;
-    int temp, i, left, right;
+    int choice, i;
 
     printf("Enter the number of elements in the array: ");
-    scanf("%d", &length);
+    scanf("%d", &choice);
 
     int array[length];
 
@@ -37,15 +57,7 @@ int main() {
         right--;
     }
 
-    printf("Reversed Array: {");
-    for (i = 0; i < length; i++) {
-        if (i == length - 1) {
-            printf("%d", array[i]);
-        } else {
-            printf("%d, ", array[i]);
-        }
-    }
-    printf("}");
-
     return 0;
 }
+
+
