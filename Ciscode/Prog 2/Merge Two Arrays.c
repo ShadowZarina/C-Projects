@@ -23,6 +23,17 @@ int main() {
         scanf("%d", &array[i]);
     }
 
+    int size1 = sizeof(array1) / sizeof(array1[0]);
+    int size2 = sizeof(array2) / sizeof(array2[0]);
+    int combinedSize = size1 + size2;
+    int combinedArray[combinedSize];
+
+    // Copy elements from array1 to combinedArray
+    memcpy(combinedArray, array1, size1 * sizeof(int));
+
+    // Copy elements from array2 to combinedArray, starting after array1's elements
+    memcpy(combinedArray + size1, array2, size2 * sizeof(int));
+    
     for (x = 0; x < length - 1; x++) {
         for (y = 0; y < length - x - 1; y++) {
             if (array[y] > array[y + 1]) {
