@@ -56,7 +56,7 @@ int main() {
 
     int tasks[length];
 
-    switch case (choice) {
+    switch (choice) {
         case 1:
             addTasks();
             break;
