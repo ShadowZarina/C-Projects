@@ -1,77 +1,52 @@
-/* 
-Create a To-Do List program where the user can add, view, and delete tasks.
+Create a program that allows a user to input elements in an array of their chosen size, sort the elements in ascending order, and print out the new array.
 
 The program should:
-1. Print out a list of options for the user to choose from.
-2. Ask the user to input their choice.
-3. Call a function corresponding to the user's choice using a switch case.
-3a. Allow the user to input a task in their own words.
-3b. Print out a list of all tasks using an array.
-3c. Delete a task by asking the user to input its index.
+1. Ask the user to input the number of elements/size of the array.
+2. Ask the user to input all the elements of the array based on its size.
+3. Use a nested for loop to sort through the array and arrange all its elements in ascending order.
+4. Print out the new array in a proper bracketed format.
 */
 
 #include <stdio.h>
 
-int addTasks() {
-    printf("Enter a new task:");
-    scanf("%d", tasks[length]);
+int main() {
+    int length;
+    int temp, i, x, y;
 
-    return 1;
-}
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &length);
 
-int viewTasks() {
-    printf("To-Do List:\n");
-        for (i = 0; i < length; i++) {
-            if (i == length - 1) {
-                printf("%d", tasks[i]);
-            } else {
-                printf("%d, ", tasks[i]);
+    int array[length];
+
+    for (i = 0; i < length; i++) {
+        printf("Enter number %d of the array: ", i+1);
+        scanf("%d", &array[i]);
+    }
+
+    for (x = 0; x < length - 1; x++) {
+        for (y = 0; y < length - x - 1; y++) {
+            if (array[y] > array[y + 1]) {
+                temp = array[y];
+                array[y] = array[y + 1];
+                array[y + 1] = temp;
             }
         }
-        printf("}");
-
-    return 1;
-}
-
-int deleteTasks() {
-    int index, left = 0; right = length;
-    printf("Enter the number of the task you want to delete:");
-    scanf("%d", &index);
-
-    for (i = index - 1; i < length; i++) {
-        task[i] = task[i + 1];
     }
-    
-    return 1;
-}
 
-int main() {
-    int choice, i, length = 0;
-
-    printf("----- TO-DO LIST ----- \n");
-    printf("1. Add Task\n");
-    printf("2. View Tasks\n");
-    printf("3. Delete Task\n");
-    scanf("%d", &choice);
-
-    int tasks[length];
-
-    switch (choice) {
-        case 1:
-            addTasks();
-            break;
-        case 2:
-            viewTasks();
-            break;
-        case 3:
-            deleteTasks();
-            break;
-        default:
-            break;
+    if (array[4] == 6) {
+        printf("Sorted elements: {");
+    } else {
+        printf("{");
     }
+
+    for (i = 0; i < length; i++) {
+        if (i == length - 1) {
+            printf("%d", array[i]);
+        } else {
+            printf("%d, ", array[i]);
+        }
+    }
+    printf("}");
 
     return 0;
 }
-
-
-
