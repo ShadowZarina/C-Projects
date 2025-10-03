@@ -23,9 +23,9 @@ int viewTasks() {
     printf("To-Do List:\n");
         for (i = 0; i < length; i++) {
             if (i == length - 1) {
-                printf("%d", array[i]);
+                printf("%d", tasks[i]);
             } else {
-                printf("%d, ", array[i]);
+                printf("%d, ", tasks[i]);
             }
         }
         printf("}");
@@ -33,21 +33,31 @@ int viewTasks() {
     return 1;
 }
 
+int deleteTasks() {
+    int index, left = 0; right = length;
+    printf("Enter the number of the task you want to delete:");
+    scanf("%d", &index);
+
+    for (i = index - 1; i < length; i++) {
+        task[i] = task[i + 1];
+    }
+    
+    return 1;
+}
+
 int main() {
-    int choice, i;
+    int choice, i, length = 0;
 
     printf("Enter the number of elements in the array: ");
     scanf("%d", &choice);
 
-    int array[length];
+    int tasks[length];
 
     for (i = 0; i < length; i++) {
         printf("Enter number %d of the array: ", i+1);
         scanf("%d", &array[i]);
     }
 
-    left = 0;
-    right = length -1;
     
     while (left < right) {
         temp = array[left];
