@@ -14,58 +14,75 @@ The program should:
 
 int addTasks() {
     printf("Enter a new task:");
-    scanf("%d", tasks[length]);
-
-    return 1;
+    scanf("%s", &tasks[length]);
+    length++;
 }
 
 int viewTasks() {
+    int i;
+
     printf("To-Do List:\n");
-        for (i = 0; i < length; i++) {
-            if (i == length - 1) {
-                printf("%d", tasks[i]);
-            } else {
-                printf("%d, ", tasks[i]);
+        
+        if (length == 0) {
+            printf("No tasks left to do!");
+            return 1;
+        } else {
+            for (i = 0; i < length; i++) {
+                if (i == length - 1) {
+                    printf("\n%d. %s", i+1, tasks[i]);
+                } else {
+                    printf("\n%d. %s, ", i+1, tasks[i]);
+                }
             }
         }
-        printf("}");
-
-    return 1;
 }
 
 int deleteTasks() {
-    int index, left = 0; right = length;
-    printf("Enter the number of the task you want to delete:");
+    int i, index, length;
+
+    if (length == 0) {
+            printf("No tasks available to delete!");
+            return 1;
+        } else {
+            for (i = 0; i < length; i++) {
+                if (i == length - 1) {
+                    printf("\n%d. %s", i+1, tasks[i]);
+                } else {
+                    printf("\n%d. %s, ", i+1, tasks[i]);
+                }
+            }
+        }
+
+    printf("\nEnter the number of the task you want to delete:");
     scanf("%d", &index);
 
-    for (i = index - 1; i < length; i++) {
-        task[i] = task[i + 1];
+    for (i = 0; i < length - index - 1; i++) {
+        tasks[index-1] = tasks[index];
     }
-    
-    return 1;
+
+    length--;
 }
 
 int main() {
-    int choice, i, length = 0;
+    int tasks[10], choice, i, length = 0;
 
     printf("----- TO-DO LIST ----- \n");
     printf("1. Add Task\n");
     printf("2. View Tasks\n");
     printf("3. Delete Task\n");
+    printf("Enter a choice:");
     scanf("%d", &choice);
-
-    int tasks[length];
 
     switch (choice) {
         case 1:
             addTasks();
-            break;
+            return 1;
         case 2:
             viewTasks();
-            break;
+            return 1;
         case 3:
             deleteTasks();
-            break;
+            return 1;
         default:
             break;
     }
