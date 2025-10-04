@@ -6,7 +6,7 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 ## To-Do List
 
 ### Ciscode
-- Make 8 more Prog 2 questions
+- Make 5 more Prog 2 questions
 - 10 prompts for DSA questions
 - Learn insertion and merge sorting
 
@@ -18,5 +18,3 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 https://roadmap.sh/datastructures-and-algorithms
 - Leetcode Grind 75
 https://leetcode.com/problem-list/rab78cw1/
-- Neetcode Course (use the free resources)
-https://neetcode.io/courses/dsa-for-beginners/0
