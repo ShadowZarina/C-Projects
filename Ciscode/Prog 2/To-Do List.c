@@ -27,51 +27,60 @@ Delete a task by asking the user to input its index.
 (You may use the strcpy() function from string.h to left shift the tasks.)
 */
 
+// Header file delcarations
 #include <stdio.h>
 #include <string.h>
 
+// Add task function
 void addTasks(char tasks[][100], int *length) {
+    // Check if task list is full
     if (*length >= 10) {
         printf("Task list is full!\n");
         return;
     }
+    // Add a new task
     printf("Enter a new task: \n");
     fgets(tasks[*length], 100, stdin);
     (*length)++;                 
 }
 
+// View tasks function
 void viewTasks(char tasks[][100], int *length) {
     int i;
-
+    // Print out to-do list
     printf("\n----- To-Do List -----\n");
+    // Check if there are 0 tasks
     if (*length == 0) {
         printf("No tasks left to do!\n");
         return;
     }
-
+    // Print out tasks one-by-one
     for (i = 0; i < *length; i++) {
         printf("%d. %s", i + 1, tasks[i]);
     }
 }
 
+// Delete tasks function
 void deleteTasks(char tasks[][100], int *length) {
     int i, index;
-
+    // Check if there are 0 tasks
     if (*length == 0) {
         printf("No tasks available to delete!\n");
         return;
     }
-
+    // Call function to view task list
     viewTasks(tasks, length);
 
+    // Ask user to input index
     printf("\nEnter the number of the task you want to delete: ");
     scanf("%d", &index);
 
+    // Check if index input is valid
     if (index < 1 || index > *length) {
         printf("Invalid task number!\n");
         return;
     }
-
+    // Move all tasks to the right of the index to the left
     for (i = index - 1; i < *length - 1; i++) {
         strcpy(tasks[i], tasks[i + 1]);
     }
@@ -80,10 +89,12 @@ void deleteTasks(char tasks[][100], int *length) {
     printf("Task %d deleted successfully!\n", index);
 }
 
+// Main function
 int main() {
     int choice, length = 0;
     char tasks[10][100];
 
+    // While loop to print main menu and ask user input
     while (1) {
         printf("\n----- TO-DO LIST MENU -----\n");
         printf("1. Add Task\n");
@@ -94,6 +105,7 @@ int main() {
         scanf("%d", &choice);
         while (getchar() != '\n'); 
 
+        // Switch case for user's choice
         switch (choice) {
             case 1:
                 addTasks(tasks, &length);
