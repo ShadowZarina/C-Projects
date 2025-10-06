@@ -1,10 +1,11 @@
-Create a program that allows a user to input elements in an array of their chosen size, sort the elements in ascending order, and print out the new array.
+Create a C program that allows a user to input elements for 2 arrays, merge the two arrays together, and print out the new array in descending order.
 
 The program should:
-1. Ask the user to input the number of elements/size of the array.
-2. Ask the user to input all the elements of the array based on its size.
-3. Use a nested for loop to sort through the array and arrange all its elements in ascending order.
-4. Print out the new array in a proper bracketed format.
+1. Ask the user to input the number of elements/size of the 2 arrays.
+2. Ask the user to input all the elements of the arrays (one array at a time).
+3. Merge the two arrays together into one, regardless of the element order.
+4. Use a nested for loop to sort through the array and arrange all its elements in descending order.
+5. Print out the new array in a proper bracketed format.
 */
 
 #include <stdio.h>
