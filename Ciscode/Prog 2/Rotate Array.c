@@ -1,8 +1,8 @@
 Create a program that allows a user to input elements in an array of their chosen size, shift the elements to the right by a certain index, and print out the new array.
 
 The program should:
-1. Ask the user to input the number of elements/size of the 2 arrays.
-2. Ask the user to input all the elements of the first and second arrays.
+1. Ask the user to input the number of elements/size of the array.
+2. Ask the user to input all the elements of the array.
 3. Ask the user to input an index by which the elements will shift.
 4. Shift all the elements of the array to the left by a certain index (left shift by 1 index at a time).
 (Elements that have reached the left end of the array (index 0) should be moved to the right end of the array and shifted accordingly.)
