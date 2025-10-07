@@ -11,42 +11,44 @@ The program should:
 #include <stdio.h>
 
 int main() {
-    int length;
-    int temp, i;
+    int length1, length2, combinedLength;
+    int temp, i, x, y;
 
-    printf("Enter the number of elements in the array: ");
-    scanf("%d", &length);
-
-    int array[length];
-
-    for (i = 0; i < length; i++) {
-        printf("Enter number %d of the array: ", i+1);
-        scanf("%d", &array[i]);
+    int array1[], array2[];
+    
+    for (i = 0; i < length1; i++) {
+        printf("Number %d of Array 1: ", i+1);
+        scanf("%d", &array1[i]);
     }
 
-    int size1 = sizeof(array1) / sizeof(array1[0]);
-    int size2 = sizeof(array2) / sizeof(array2[0]);
-    int combinedSize = size1 + size2;
-    int combinedArray[combinedSize];
+    for (i = 0; i < length2; i++) {
+        printf("Number %d of Array 2: ", i+1);
+        scanf("%d", &array2[i]);
+    }
+
+    length1 = sizeof(array1) / sizeof(array1[0]);
+    length2 = sizeof(array2) / sizeof(array2[0]);
+    combinedLength = length1 + length2;
+    int combinedArray[combinedLength];
 
     // Copy elements from array1 to combinedArray
-    memcpy(combinedArray, array1, size1 * sizeof(int));
+    memcpy(combinedArray, array1, legnth1 * sizeof(int));
 
     // Copy elements from array2 to combinedArray, starting after array1's elements
-    memcpy(combinedArray + size1, array2, size2 * sizeof(int));
+    memcpy(combinedArray + length1, array2, length2 * sizeof(int));
     
-    for (x = 0; x < length - 1; x++) {
-        for (y = 0; y < length - x - 1; y++) {
-            if (array[y] > array[y + 1]) {
-                temp = array[y];
-                array[y] = array[y + 1];
-                array[y + 1] = temp;
+    for (x = 0; x < combinedLength - 1; x++) {
+        for (y = 0; y < combinedLength - x - 1; y++) {
+            if (combinedArray[y] > combinedArray[y + 1]) {
+                temp = combinedArray[y];
+                combinedArray[y] = combinedArray[y + 1];
+                combinedArray[y + 1] = temp;
             }
         }
     }
 
-    for (i = 0; i < length; i++) {
-        if (i == length - 1) {
+    for (i = 0; i < combinedLength; i++) {
+        if (i == combinedLength - 1) {
             printf("%d", combinedArray[i]);
         } else {
             printf("%d, ", combinedArray[i]);
