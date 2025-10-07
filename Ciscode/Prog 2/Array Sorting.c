@@ -34,12 +34,6 @@ int main() {
         }
     }
 
-    if (array[4] == 6) {
-        printf("Sorted elements: {");
-    } else {
-        printf("{");
-    }
-
     for (i = 0; i < length; i++) {
         if (i == length - 1) {
             printf("%d", array[i]);
