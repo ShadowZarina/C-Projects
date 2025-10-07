@@ -20,7 +20,7 @@ int main() {
     printf("Enter the number of elements for Array 2: ");
     scanf("%d", &length2);
 
-    // Create variable-length arrays
+    // Declare the 2 variable-length arrays
     int array1[length1];
     int array2[length2];
 
