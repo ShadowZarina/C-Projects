@@ -13,8 +13,12 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 ## DSA: Things to Learn
 
 
-#### Links
+#### Resources
 - Roadmap
 https://roadmap.sh/datastructures-and-algorithms
 - Leetcode Grind 75
 https://leetcode.com/problem-list/rab78cw1/
+
+## Links
+
+#### Other Projects
