@@ -6,7 +6,7 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 ## To-Do List
 
 ### Ciscode
-- Make 4 more Prog 2 questions
+- Make 3 more Prog 2 questions
 - 10 prompts for DSA questions
 - Learn insertion and merge sorting
 
