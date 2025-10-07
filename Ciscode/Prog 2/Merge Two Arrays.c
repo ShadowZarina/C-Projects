@@ -12,7 +12,7 @@ The program should:
 
 int main() {
     int length;
-    int temp, i, x, y;
+    int temp, i;
 
     printf("Enter the number of elements in the array: ");
     scanf("%d", &length);
@@ -45,17 +45,11 @@ int main() {
         }
     }
 
-    if (array[4] == 6) {
-        printf("Sorted elements: {");
-    } else {
-        printf("{");
-    }
-
     for (i = 0; i < length; i++) {
         if (i == length - 1) {
-            printf("%d", array[i]);
+            printf("%d", combinedArray[i]);
         } else {
-            printf("%d, ", array[i]);
+            printf("%d, ", combinedArray[i]);
         }
     }
     printf("}");
