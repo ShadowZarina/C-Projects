@@ -4,7 +4,7 @@ Create a program that allows a user to input elements in an array of their chose
 The program should:
 1. Ask the user to input the number of elements/size of the array.
 2. Ask the user to input all the elements of the array.
-3. Ask the user to input a countby which the elements will shift.
+3. Ask the user to input a countby which the elements will left shift.
 4. Call a function "void shiftArray(array, length, count)" that takes in 3 parameters and does the following: 
 4a. Shift all the elements of the array to the left by a certain index (left shift by 1 index at a time).
 (Elements that have reached the left end of the array (index 0) should be moved to the right end of the array and shifted accordingly.)
@@ -22,7 +22,7 @@ void shiftArray(int array[], int length, int count) {
 
     // Right shift by 'count' positions
     for (i = 0; i < length; i++) {
-        temp[(i + count) % length] = array[i];
+        temp[i] = array[(i + count) % length];
     }
 
     // Copy back shifted values to the original array
@@ -31,13 +31,13 @@ void shiftArray(int array[], int length, int count) {
     }
 
     // Print the shifted array
-    printf("\nShifted Array:\n{ ");
+    printf("\nShifted Array:\n{");
     for (i = 0; i < length; i++) {
         printf("%d", array[i]);
         // Print commas if i is not the last element of the array
         if (i < length - 1) printf(", ");
     }
-    printf(" }\n");
+    printf("}\n");
 }
 
 // Main function
@@ -66,4 +66,5 @@ int main() {
 
     return 0;
 }
+
 
