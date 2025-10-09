@@ -1,76 +1,58 @@
+/*
 Create a C program that allows a user to input elements in an array and a number to look for, search the array, and print out the index where it's located.
 
 The program should:
 1. Ask the user to input the elements of the array.
-2. 
-3. Call a function int search(array[], length) 
-4. Using a for loop, iterate through the whole array to find 
-5. Print out the index of the element that matches 
+2. Print out the original array.
+3. Call a function int search(array[], length) to ask for a number to search.
+4. Using a for loop, the function should iterate through the whole array to find the index of the number that matches what the user is searching for.
+5. Return back to the main function.
+6. If there is a corresponding number in the array, print out the index of the element that matches. Otherwise, state that the number cannot be found.
 */
 
 #include <stdio.h>
 
-int main() {
-    int temp, i, x, y, length1, length2, combinedLength;
+int search(int array[], int length) {
+    int i, index = -1, num;
+
+    printf("Enter a number to search for in the array: ");
+    scanf("%d", &num);
     
-    // Ask for array sizes for array1 and array2
-    printf("Enter the number of elements for Array 1: ");
-    scanf("%d", &length1);
-
-    printf("Enter the number of elements for Array 2: ");
-    scanf("%d", &length2);
-
-    // Declare the 2 variable-length arrays
-    int array1[length1];
-    int array2[length2];
+    for (i = 0; i < length; i++) {
+        if (array[i] == num) {
+            return i;
+        }
+        return 1;
+    }
+    
+}
+    
+int main() {
+    int i, index = -1; length = 10; array[10];
 
     // Input elements for array1
-    printf("\n--- Enter elements for Array 1 ---\n");
+    printf("\n--- Enter elements for the array ---\n");
     for (i = 0; i < length1; i++) {
         printf("Element %d: ", i + 1);
-        scanf("%d", &array1[i]);
+        scanf("%d", &array[i]);
     }
-
-    // Step 4: Input elements for array2
-    printf("\n--- Enter elements for Array 2 ---\n");
-    for (i = 0; i < length2; i++) {
-        printf("Element %d: ", i + 1);
-        scanf("%d", &array2[i]);
-    }
-
-    // Merge the arrays into a combinedArray, Calculate combinedLength
-    combinedLength = length1 + length2;
-    int combinedArray[combinedLength];
-
-    // Copy elements from array1 onto combinedArray
-    for (i = 0; i < length1; i++) {
-        combinedArray[i] = array1[i];
-    }
-
-    // Copy elements from array2 onto combinedArray
-    for (i = 0; i < length2; i++) {
-        combinedArray[length1 + i] = array2[i];
-    }
-
-    // Sort the combined array in descending order using nested loops
-    for (x = 0; x < combinedLength - 1; x++) {
-        for (y = 0; y < combinedLength - x - 1; y++) {
-            if (combinedArray[y] < combinedArray[y + 1]) {
-                temp = combinedArray[y];
-                combinedArray[y] = combinedArray[y + 1];
-                combinedArray[y + 1] = temp;
-            }
-        }
-    }
-
     // Print the final sorted array
-    printf("\nMerged Array in Descending Order:\n{ ");
-    for (i = 0; i < combinedLength; i++) {
-        printf("%d", combinedArray[i]);
+    printf("\nArray:\n{ ");
+    for (i = 0; i < length; i++) {
+        printf("%d", array[i]);
         // Print commas if 'i' is still not the last element
         if (i < combinedLength - 1) printf(", ");
     }
     printf(" }\n");
 
+    index = search(array, length);
+
+    if (index != -1) {
+        printf("The element can be found in index number %d!", index);
+    }
+    else {
+        printf("The element cannot be found in the array!");
+    }
+    
     return 0;
 }
