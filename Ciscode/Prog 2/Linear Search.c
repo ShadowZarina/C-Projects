@@ -10,8 +10,10 @@ The program should:
 6. If there is a corresponding number in the array, print out the index of the element that matches. Otherwise, state that the number cannot be found.
 */
 
+// Header file declaration
 #include <stdio.h>
 
+// Search function definition
 int search(int array[], int length) {
     int i, index = -1, num;
 
@@ -19,34 +21,34 @@ int search(int array[], int length) {
     scanf("%d", &num);
     
     for (i = 0; i < length; i++) {
-        if (array[i] == num) {
+        if (array[i] == num) 
             return i;
-        }
-        return 1;
     }
-    
+    return -1;
 }
     
 int main() {
-    int i, index = -1; length = 10; array[10];
+    int i, index = -1, length = 10, array[10];
 
-    // Input elements for array1
+    // Input elements for the array
     printf("\n--- Enter elements for the array ---\n");
-    for (i = 0; i < length1; i++) {
+    for (i = 0; i < length; i++) {
         printf("Element %d: ", i + 1);
         scanf("%d", &array[i]);
     }
-    // Print the final sorted array
+    // Print the original array
     printf("\nArray:\n{ ");
     for (i = 0; i < length; i++) {
         printf("%d", array[i]);
         // Print commas if 'i' is still not the last element
-        if (i < combinedLength - 1) printf(", ");
+        if (i < length - 1) printf(", ");
     }
     printf(" }\n");
 
+    // Call the search function
     index = search(array, length);
 
+    // Printf statements for the index number
     if (index != -1) {
         printf("The element can be found in index number %d!", index);
     }
