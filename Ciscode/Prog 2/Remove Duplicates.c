@@ -4,7 +4,9 @@ Create a program that allows a user to input elements in an array of their chose
 The program should:
 1. Ask the user to input the number of elements/size of the array.
 2. Ask the user to input all the elements of the array based on its size.
-3. Call a function removeDuplicates(array, length) that will remove duplicates in the array.
+3. Call a function removeDuplicates(array, length) that will do the following:
+3a. Sort the array in alphabetical order.
+3b. Remove duplicates from the sorted array.
 4. Print out the new array in a proper bracketed format.
 */
 
