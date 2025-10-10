@@ -1,10 +1,10 @@
 /*
-Create a program that allows a user to input elements in an array of their chosen size, sort the elements in ascending order, and print out the new array.
+Create a program that allows a user to input elements in an array of their chosen size, remove duplicate elements, and print out the new organized array.
 
 The program should:
 1. Ask the user to input the number of elements/size of the array.
 2. Ask the user to input all the elements of the array based on its size.
-3. Use a nested for loop to sort through the array and arrange all its elements in ascending order.
+3. Call a function removeDuplicates(array, length) that will remove duplicates in the array.
 4. Print out the new array in a proper bracketed format.
 */
 
