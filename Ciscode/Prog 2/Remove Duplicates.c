@@ -7,25 +7,14 @@ The program should:
 3. Call a function removeDuplicates(array, length) that will do the following:
 3a. Sort the array in alphabetical order.
 3b. Remove duplicates from the sorted array.
-4. Print out the new array in a proper bracketed format.
+3c. Print out the new array in a proper bracketed format.
 */
 
 #include <stdio.h>
 
-int main() {
-    int length;
+int removeDuplicates(int array[], int length) {
     int temp, i, x, y;
-
-    printf("Enter the number of elements in the array: ");
-    scanf("%d", &length);
-
-    int array[length];
-
-    for (i = 0; i < length; i++) {
-        printf("Enter number %d of the array: ", i+1);
-        scanf("%d", &array[i]);
-    }
-
+    
     for (x = 0; x < length - 1; x++) {
         for (y = 0; y < length - x - 1; y++) {
             if (array[y] > array[y + 1]) {
@@ -36,6 +25,8 @@ int main() {
         }
     }
 
+    if (array[i] ==
+
     for (i = 0; i < length; i++) {
         if (i == length - 1) {
             printf("%d", array[i]);
@@ -44,6 +35,22 @@ int main() {
         }
     }
     printf("}");
+    
+}
+
+int main() {
+    int length;
+    int i;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &length);
+
+    int array[length];
+
+    for (i = 0; i < length; i++) {
+        printf("Enter number %d of the array: ", i+1);
+        scanf("%d", &array[i]);
+    }
 
     return 0;
 }
