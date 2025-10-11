@@ -6,8 +6,8 @@ Most of the projects were created to accomplish simple tasks and projects, with 
 ## To-Do List
 
 ### Ciscode
-- Make 3 more Prog 2 questions
 - 10 prompts for DSA questions
+- Provide 10 DSA questions in Ciscode
 - Learn insertion and merge sorting
 
 ## DSA: Things to Learn
@@ -22,3 +22,9 @@ https://leetcode.com/problem-list/rab78cw1/
 ## Links
 
 #### Other Projects
+- Arrays
+https://github.com/ShadowZarina/Arrays
+- Strings
+- Linked Lists
+- Hash Maps
+- Binary Trees
