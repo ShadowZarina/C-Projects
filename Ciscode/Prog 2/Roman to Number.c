@@ -3,17 +3,19 @@ Create a C program that allows a user to input a Roman numeral, convert it into 
 The program should:
 1. Ask the user to input a string of Roman numerals.
 2. Convert the Roman numerals into an integer.
-2a. With a for loop, loop through each character and call getRomanValue(roman[i]);
+2a. With a for loop, loop through each character and call getRomanValue(roman[i]).
 2b. The function should contain a switch case that assigns numerical values to each Roman numeral and return it to the main function.
 3. Print out the converted number.
 */
 
 // Header file declaration
 #include <stdio.h>
+#include <string.h>
 
 // Conversion function definition
-int getRomanValue(char roman[i]) {
+int getRomanValue(char c) {
 
+    // Switch case
     switch (c) {
         case 'I': return 1;
         case 'V': return 5;
@@ -29,6 +31,7 @@ int getRomanValue(char roman[i]) {
 // Main function 
 int main() {
     int i, length, result = 0;
+    char roman[20];
     
     // Ask for Roman numeral input
     printf("Enter a Roman numeral: ");
@@ -39,19 +42,21 @@ int main() {
     // Loop through each character and convert it to numbers using the function
     for (i = 0; i < length; i++) {
         int currentValue = getRomanValue(roman[i]);
-        int nextValue = i + 1 
-        if (i + 1 < length) {
-            getRomanValue(roman[i+1]);
-        } else {
-            0;
-        }
 
         // Check for 2-digit Roman numeral pairs (eg. IV, VI) and add accordingly
-        if (currentValue < nextValue) {
+        if (i + 1 < length) {
+            int nextValue = getRomanValue(roman[i+1]);
+            // Calculate the proper number to add if the next value is greater than the current value
+            if (currentValue < nextValue) {
+              result += (nextValue - currentValue);
+              i++;
+            } else {
+              result += currentValue;
+            }
+        } else {
             result += currentValue;
-        else if (currentValue > nextValue) {
-            result -= currentValue;
         }
+        
     }
 
     // Print the converted number
@@ -59,4 +64,5 @@ int main() {
             
     return 0;
 }
+
 
