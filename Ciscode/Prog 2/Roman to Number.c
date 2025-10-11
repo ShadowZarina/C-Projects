@@ -36,7 +36,7 @@ int main() {
 
     length = strlen(roman);
 
-    // Loop through each character and convert it to numbers
+    // Loop through each character and convert it to numbers using the function
     for (i = 0; i < length; i++) {
         int currentValue = getRomanValue(roman[i]);
         int nextValue = i + 1 
@@ -46,6 +46,7 @@ int main() {
             0;
         }
 
+        // Check for 2-digit Roman numeral pairs (eg. IV, VI) and add accordingly
         if (currentValue < nextValue) {
             result += currentValue;
         else if (currentValue > nextValue) {
@@ -53,6 +54,7 @@ int main() {
         }
     }
 
+    // Print the converted number
     printf("The Roman numeral converted equals to %d.", result);
             
     return 0;
