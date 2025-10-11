@@ -1,11 +1,11 @@
-Create a C program that allows a user to input elements for 2 arrays, merge the two arrays together, and print out the new array in descending order.
+Create a C program that allows a user to input a Roman numeral, convert it into numbers, and print out the result.
 
 The program should:
-1. Ask the user to input the number of elements/size of the 2 arrays.
-2. Ask the user to input all the elements of the first and second arrays.
-3. Merge the elements of the 2 arrays into a single array.
-4. Using nested for loops, sort the elements of the new array in DESCENDING order.
-5. Print out the new array in a proper bracketed format.
+1. Ask the user to input a string of Roman numerals.
+2. Convert the Roman numerals into an integer.
+2a.
+2b.
+3. Print out the converted number.
 */
 
 #include <stdio.h>
