@@ -1,5 +1,3 @@
-// NEEDS TO BE IMPROVED!! 
-
 /*
 Create a C program that allows the user to input a string then sorts each word alphabetically regardless of punctuation marks or spacing.
 
@@ -73,11 +71,13 @@ int main() {
     qsort(words, wordCount, sizeof(char *), compareWords);
 
     // Print sorted words
-    printf("\nSorted words:\n");
+    printf("\nSorted unique words:\n");
     for (int i = 0; i < wordCount; i++) {
-        printf("%s", words[i]);
-        if (i < wordCount - 1) printf(", ");
-        free(words[i]); 
+        if (i == 0 || strcmp(words[i], words[i - 1]) != 0) {
+            printf("%s", words[i]);
+            if (i < wordCount - 1) printf(", ");
+        }
+        free(words[i]);
     }
     printf(".\n");
 
