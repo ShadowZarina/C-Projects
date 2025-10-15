@@ -1,3 +1,28 @@
+/*
+Create a C program that produces binary trees with nodes from the user's input, calculates the maximum heights of the binary trees, and displays them.
+
+In creating the trees and calculating the heights of the binary trees, the following functions should be implemented:
+
+1. filterNames(NQueue *nq, char *filterString)
+- Removes all names from the queue that match the given last name (filterString).
+- Returns the removed names in an array, ending with a sentinel element (both fname and lname as empty strings " ").
+- If no names match, return only the sentinel.
+
+
+2. insertSorted(NQueue *nq, Name n)
+- Inserts a new name into the queue in sorted order by last name.
+- Must directly manipulate the queue’s array structure (i.e., do not use enqueue, dequeue, or front).
+- Should return false if the queue is already full.
+
+
+The program should perform the following:
+1. Create a binary tree with nodes from the user's input.
+2. Use a recursive function to calculate the maximum height of the binary tree.
+3. Display the maximum height of the tree.
+
+*/
+
+
 // Header file declarations
 #include <stdio.h>
 #include <stdlib.h> 
