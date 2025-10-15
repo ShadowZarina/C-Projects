@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h> 
 
+// Stucture for Binary Tree nodes
 typedef struct Node {
     int data;        
     struct Node *left; 
     struct Node *right; 
 } Node;
 
+// Function to create Binary Tree nodes
 Node* createNode(int data) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (newNode == NULL) {
@@ -20,6 +22,7 @@ Node* createNode(int data) {
     return newNode;
 }
 
+// Function for inserting Binary Tree nodes into the tree
 Node* insertNode(Node* root, int data) {
     if (root == NULL) {
         return createNode(data);
