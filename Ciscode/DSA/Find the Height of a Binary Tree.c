@@ -20,6 +20,8 @@ The program should perform the following:
 2. Use a recursive function to calculate the maximum height of the binary tree.
 3. Display the maximum height of the tree.
 
+SAMPLE INPUT = [1,3,4,2,null,6,5]
+1 branches into 3 and 4, 3 branches into 2 and null, 4 branches into 6 and 5
 */
 
 
